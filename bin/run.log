@@ -1,0 +1,48 @@
+Compiled from "SaleWindow.java"
+class JoinParameter extends java.lang.Thread {
+  JoinParameter();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Thread."<init>":()V
+       4: return
+
+  public void run();
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iload_1
+       3: bipush        10
+       5: if_icmpge     81
+       8: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      11: new           #3                  // class java/lang/StringBuilder
+      14: dup
+      15: invokespecial #4                  // Method java/lang/StringBuilder."<init>":()V
+      18: ldc           #5                  // String ThreadID:[
+      20: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      23: invokestatic  #7                  // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+      26: invokevirtual #8                  // Method java/lang/Thread.getId:()J
+      29: invokevirtual #9                  // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+      32: ldc           #10                 // String ]
+      34: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      37: invokestatic  #7                  // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+      40: invokevirtual #11                 // Method java/lang/Thread.getName:()Ljava/lang/String;
+      43: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      46: ldc           #12                 // String
+      48: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      51: iload_1
+      52: invokevirtual #13                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      55: invokevirtual #14                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      58: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      61: ldc2_w        #16                 // long 1000l
+      64: invokestatic  #18                 // Method java/lang/Thread.sleep:(J)V
+      67: goto          75
+      70: astore_2
+      71: aload_2
+      72: invokevirtual #20                 // Method java/lang/InterruptedException.printStackTrace:()V
+      75: iinc          1, 1
+      78: goto          2
+      81: return
+    Exception table:
+       from    to  target type
+          61    67    70   Class java/lang/InterruptedException
+}
