@@ -91,13 +91,25 @@ public class publictest
  
         Drop drop = new Drop();  
         Thread t1 = new Thread(new Producer(drop)); 
+		
+		System.out.printf("Produce create, ThreadID:%d%n", t1.getId());
         Thread t2 = new Thread(new Consumer(drop));
+		System.out.printf("Consumer create, ThreadID:%d%n", t2.getId());
+		Thread t3 = new Thread(new Consumer(drop));
+		System.out.printf("Consumer create, ThreadID:%d%n", t3.getId());
+		Thread t4 = new Thread(new Consumer(drop));
+		System.out.printf("Consumer create, ThreadID:%d%n", t4.getId());
 		t1.start();   
 		t2.start();  
+		t3.start(); 
+		t4.start();
 		try
 		{
-			t2.join();
 			t1.join();
+			t2.join();
+			t3.join();
+			t4.join();
+			System.out.println("Consumer totale:"+drop.getConsumerTotal());
 		}
 		catch(Exception e)
 		{
