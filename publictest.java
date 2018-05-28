@@ -109,7 +109,7 @@ public class publictest
 			t2.join();
 			t3.join();
 			t4.join();
-			System.out.println("Consumer totale:"+drop.getConsumerTotal());
+			System.out.println("Thread run OVER. Consumer totale:"+drop.getConsumerTotal());
 		}
 		catch(Exception e)
 		{
