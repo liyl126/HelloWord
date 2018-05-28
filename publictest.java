@@ -1,5 +1,6 @@
 //package  com.mytest;
 // import DatetimeTest;
+import java.util.*;
 public class publictest
 {
 	private long bgdt=0;
@@ -16,6 +17,20 @@ public class publictest
 		System.out.println("Current Millis = "+bgdt);
 	}
 	
+	public int objectRefTest(){
+		String strBuff = new String("This is test String.");
+		objectRefModifyTest(strBuff);
+		System.out.printf("call after String is£º%s  length=%d%n",strBuff,strBuff.length());
+		return strBuff.length();
+	}
+	
+	private int objectRefModifyTest (String aRef){
+		System.out.printf("mobdify before String is£º%s  length=%d%n",aRef,aRef.length());
+		aRef += " add String!";
+		System.out.printf("modify after String is£º%s  length=%d%n",aRef,aRef.length());
+		return aRef.length();
+	}
+	
 	public void DatetimeTestfn(){
 		//DatetimeTest 
 		//dt = new DatetimeTest();
@@ -30,6 +45,7 @@ public class publictest
 		predt = temp;
 		
 		dt.formatTest();
+		System.out.println("\n\n*****************************************************\n");
 	}
 	
 	public void BaseDataTypeInfo(){
@@ -115,5 +131,14 @@ public class publictest
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public void PrintProperties()
+	{
+		Properties p = System.getProperties();
+		p.list(System.out);
+		System.out.println("\n\n----Memory Usage:");
+		Runtime t = Runtime.getRuntime();
+		System.out.printf("\tTotal Memory:%d\n\tFree  Memory:%d%n",t.totalMemory(),t.freeMemory());
 	}
 }

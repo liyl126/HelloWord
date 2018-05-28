@@ -50,6 +50,11 @@ public class HelloWorld
 		pt.ThreadSynTest();
 		pt.DatetimeTestfn();
 
+		pt.objectRefTest();
+		pt.DatetimeTestfn();
+		
+		pt.PrintProperties();
+		pt.DatetimeTestfn();
 		//<< test
 		// OperationTest();
 		
