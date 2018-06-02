@@ -141,4 +141,17 @@ public class publictest
 		Runtime t = Runtime.getRuntime();
 		System.out.printf("\tTotal Memory:%d\n\tFree  Memory:%d%n",t.totalMemory(),t.freeMemory());
 	}
+	
+	public void dataTypeTest() {
+		PrimitiveOverloading p = new PrimitiveOverloading();
+		p.testConstVal();
+		p.testChar();
+		p.testByte();
+		p.testShort();
+		p.testInt();
+		p.testLong();
+		p.testFloat();
+		p.testDouble();
+		p.testDoubleConvert();
+	}
 }

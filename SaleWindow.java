@@ -140,4 +140,127 @@ class DatetimeTest{
 	
 }
 
+class PrimitiveOverloading {
+// boolean can't be automatically converted
+	static void prt(String s) {
+		System.out.println(s);
+	}
+	private void f1(char x) { prt("f1(char)"); }
+	private void f1(byte x) { prt("f1(byte)"); }
+	private void f1(short x) { prt("f1(short)"); }
+	private void f1(int x) { prt("f1(int)"); }
+	private void f1(long x) { prt("f1(long)"); }
+	private void f1(float x) { prt("f1(float)"); }
+	private void f1(double x) { prt("f1(double)"); }
+	
+	private void f2(byte x) { prt("f2(byte)"); }
+	private void f2(short x) { prt("f2(short)"); }
+	private void f2(int x) { prt("f2(int)"); }
+	private void f2(long x) { prt("f2(long)"); }
+	private void f2(float x) { prt("f2(float)"); }
+	private void f2(double x) { prt("f2(double)");}
+	
+	private void f3(short x) { prt("f3(short)"); }
+	private void f3(int x) { prt("f3(int)"); }
+	private void f3(long x) { prt("f3(long)"); }
+	private void f3(float x) { prt("f3(float)"); }
+	private void f3(double x) { prt("f3(double)"); }
+	
+	private void f4(int x) { prt("f4(int)"); }
+	private void f4(long x) { prt("f4(long)"); }
+	private void f4(float x) { prt("f4(float)"); }
+	private void f4(double x) { prt("f4(double)"); }
+	
+	private void f5(long x) { prt("f5(long)"); }
+	private void f5(float x) { prt("f5(float)"); }
+	private void f5(double x) { prt("f5(double)"); }
+	
+	private void f6(float x) { prt("f6(float)"); }
+	private void f6(double x) { prt("f6(double)"); }
+	
+	private void f7(double x) { prt("f7(double)"); }
+	
+	private void fx1(char x)   { prt("fx1(char)"); }
+	private void fx1(byte x)   { prt("fx1(byte)"); }
+	private void fx1(short x)  { prt("fx1(short)"); }
+	private void fx1(int x)    { prt("fx1(int)"); }
+	private void fx1(long x)   { prt("fx1(long)"); }
+	private void fx1(float x)  { prt("fx1(float)"); }
+	private void fx1(double x) { prt("fx1(double)"); }
+	
+	private void fx2(char x)   { prt("fx2(char)"); }
+	private void fx2(byte x)   { prt("fx2(byte)"); }
+	private void fx2(short x)  { prt("fx2(short)"); }
+	private void fx2(int x)    { prt("fx2(int)"); }
+	private void fx2(long x)   { prt("fx2(long)"); }
+	private void fx2(float x)  { prt("fx2(float)"); }
+	
+	private void fx3(char x)   { prt("fx3(char)"); }
+	private void fx3(byte x)   { prt("fx3(byte)"); }
+	private void fx3(short x)  { prt("fx3(short)"); }
+	private void fx3(int x)    { prt("fx3(int)"); }
+	private void fx3(long x)   { prt("fx3(long)"); }
+	
+	private void fx4(char x)   { prt("fx4(char)"); }
+	private void fx4(byte x)   { prt("fx4(byte)"); }
+	private void fx4(short x)  { prt("fx4(short)"); }
+	private void fx4(int x)    { prt("fx4(int)"); }
+	
+	private void fx5(char x)   { prt("fx5(char)"); }
+	private void fx5(byte x)   { prt("fx5(byte)"); }
+	private void fx5(short x)  { prt("fx5(short)"); }
+	
+	private void fx6(char x)   { prt("fx6(char)"); }
+	private void fx6(byte x)   { prt("fx6(byte)"); }
+	
+	private void fx7(char x)   { prt("fx7(char)"); }
+	
+	public void testDoubleConvert() {
+		double x = 0;
+		prt("\ndouble argument:(double)x");
+		fx1(x);fx2((float)x);fx3((long)x);fx4((int)x);
+		fx5((short)x);fx6((byte)x);fx7((char)x);
+	}
+	
+	void testConstVal() {
+		prt("\nConstVal Testing with 5");
+			f1(5);f2(5);f3(5);f4(5);f5(5);f6(5);f7(5);
+	}
+	void testChar() {
+		char x = 'x';
+		prt("\nchar argument:'x'");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}
+	void testByte() {
+		byte x = 0;
+		prt("\nbyte argument:0");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}
+	void testShort() {
+		short x = 0;
+		prt("\nshort argument:0");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}
+	void testInt() {
+		int x = 0;
+		prt("\nint argument:0");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}
+	void testLong() {
+		long x = 0;
+		prt("\nlong argument:0");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}
+	void testFloat() {
+		float x = 0;
+		prt("\nfloat argument:0");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}
+	void testDouble() {
+		double x = 0;
+		prt("\ndouble argument:0");
+		f1(x);f2(x);f3(x);f4(x);f5(x);f6(x);f7(x);
+	}	
+}
+
 

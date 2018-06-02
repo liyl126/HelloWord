@@ -1,8 +1,19 @@
 //package  com.mytest;
+/*
+//JDK 1.8
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.Date;
+
+JDK1.7
+import java.util.LocalDate;
+import java.util.ZoneId;
+import java.util.ZonedDateTime;
+*/
+// import java.util.LocalDate;
+// import java.util.ZoneId;
+// import java.util.ZonedDateTime;
+// import java.util.Date;
 
 public class HelloWorld
 {
@@ -54,6 +65,9 @@ public class HelloWorld
 		pt.DatetimeTestfn();
 		
 		pt.PrintProperties();
+		pt.DatetimeTestfn();
+		
+		pt.dataTypeTest();
 		pt.DatetimeTestfn();
 		//<< test
 		// OperationTest();
